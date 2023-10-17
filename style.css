@@ -1,0 +1,349 @@
+/*variables*/
+:root {
+  --gold: #be8d49;
+  --dark-gold: #b46900;
+  --gray-blue: #b4cdd4;
+  --light-green: rgb(231, 255, 213);
+  --green: rgb(70, 125, 66);
+  --rose: #cf9fa6;
+  --dark-rose: #b67f88;
+}
+
+@font-face {
+  font-family: 'Flakes';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Flakes'), url('https://fonts.cdnfonts.com/s/11971/Flakes.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Christmas Hat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Christmas Hat'), url('https://fonts.cdnfonts.com/s/71304/Christmas Hat.woff') format('woff');
+}
+@font-face {
+  font-family: 'Hello Billy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Hello Billy'), url('https://fonts.cdnfonts.com/s/86111/Hello Billy.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merry Christmas Flake';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merry Christmas Flake'), url('https://fonts.cdnfonts.com/s/16198/MerryChristmasFlake.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Christmas';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Christmas'), url('https://fonts.cdnfonts.com/s/11971/Christmas.woff') format('woff');
+}
+
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--gray-blue);
+  background-image: url("./images/snow1.png"), url("./images/snow2.png"),
+    url("./images/snow3.png");
+  animation: snow 20s linear infinite;
+}
+
+/*Snow animation rules*/
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  font-family: 'Christmas';
+}
+
+#details-container,
+#card-container {
+  flex: 1;
+  text-align: center;
+}
+
+#details-container {
+  display: block;
+  margin: auto;
+  color: #ffff;
+}
+
+h1 {
+  color:#920717;
+  font-size: 2.5rem;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#details-title,
+#contacts-title,
+#location-title {
+  font-size: 1.5rem;
+  background-color: var(--rose);
+  margin-bottom: 10px;
+  width: 60%;
+  cursor: pointer;
+}
+
+#details-title:hover,
+#contacts-title:hover,
+#location-title:hover {
+  background-color: var(--dark-rose);
+}
+
+#details-title p:first-child,
+#contacts-title p:first-child,
+#location-title p:first-child {
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+#location-title a {
+  color:#3c8c64;
+  font-weight:bold;
+}
+
+#location-title a:hover {
+  color: #ed1c16;
+}
+
+#details-container .hide {
+  font-size: 1.3rem;
+  font-weight:bold;
+  background: #fff;
+  color:#3c8c64;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*Card section*/
+#outside {
+    z-index: 1;
+}
+
+#inside {
+    z-index: 0;
+}
+
+#outside,
+#inside {
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  text-align: center;
+  transition: 1s;
+  transform-origin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/testimage.jpg");
+  background-size: cover;
+  background-position-x: center;
+}
+
+#outside button {
+  background: none;
+  border: none;
+  color: #b67f88;
+  font-family: 'Christmas';
+  font-size: 2rem;
+  font-weight:bold;
+}
+
+/*Card opening animation*/
+.open-card {
+  transform: rotateY(90deg);
+}
+
+#outside-title {
+  font-size: 4rem;
+  text-align: center;
+  color: var(--gold);
+  font-family: 'Christmas Hat';
+  
+}
+
+#open-btn:hover {
+  color:#920717;
+  /* rgba(191, 0, 61, 1)*/
+  cursor: pointer;
+}
+
+#inside-title {
+  color: var(--gold);
+  font-family: 'Hello Billy';
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#inside-pic {
+  width: 300px;
+  height: 150px;
+  margin-bottom: -15px;
+}
+
+#close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: var(--light-green);
+  color: var(--green);
+  font-size: 1.3rem;
+}
+
+#close-btn:hover {
+  background-color: rgb(255, 200, 200);
+  color: rgb(189, 6, 6);
+}
+
+#message {
+  color: var(--gold);
+  font-family: Courier;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Hello Billy';
+}
+
+#rsvp-btn {
+ padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--rose);
+  font-family: 'Times New Roman', serif;
+  cursor: pointer;
+}
+
+#rsvp-btn:hover {
+  background-color: rgba(191, 0, 61, 1);
+}
+
+#rsvp-btn a {
+  color: white;
+}
+
+@media screen and (max-width:992px) {
+   .container {
+    display: block;
+   }
+
+   body, html {
+    height: 100%;
+   }
+
+   #inside, 
+   #outside {
+    margin: 10px 0;
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    height: 500px;
+   }
+
+   #outside {
+    left: 25%;
+   }
+
+   #inside {
+    right: 25%;
+   }
+
+   #outside-title {
+    font-size: 2.5rem;
+   }
+
+   #outside button {
+    font-size: 2rem;
+   }
+
+   #inside-title,
+   #message {
+    font-size: 1.4rem;
+   }
+
+   #rsvp-btn {
+    font-size: 1.1rem;
+   }
+}
+
+@media screen and (max-width:480px) {
+  #card-container{
+    text-align: center;
+  }
+
+  #details-title, 
+  #contacts-title,
+  #location-title{
+    width: 100%;
+  }
+  #inside,
+  #outside {
+    min-width: 80%;
+  }
+
+  #message {
+    font-size: 1.1rem;
+  }
+
+  #outside {
+    left: 40%;
+   }
+
+   #inside {
+    right: 40%;
+   }
+
+   #rsvp-btn {
+    font-size: 1rem;
+   }
+}

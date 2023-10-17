@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>RSVP Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--Invitation message-->
+      <h1>RSVP Form</h1>
+      <p>
+        You're invited to our annual Christmas Eve gathering party. We will be
+        having a dinner, Christmas carolling, gingerbread man baking and many
+        other activities. Do fill in this form if you're interested to join us.
+      </p> 
+      <!--Invitation form-->
+      <div class="form-area">
+        <form id="rsvp-form">
+          <label>Name</label>
+          <input id="rsvp-name" type="text" required />
+          <label>Phone number</label>
+          <input id="rsvp-phone" type="number" required />
+          <label>Number of people attending(including yourself)</label>
+          <input id="rsvp-guests" type="number" required />
+          <label>What are the names of the other guests coming, if any?</label>
+          <textarea rows="2" cols="20"></textarea>
+          <label>Indicate here if you have any dietary requirements:</label>
+          <select selected="selected">
+            <option selected>None</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+            <option>Celiac</option>
+            <option>Lactose intolerant</option>
+            <option>Diabetic</option>
+            <option>Allergic to nuts</option>
+            <option>Allergic to shellfish</option>
+          </select>
+          <label>Anything else to take note of?</label>
+          <textarea rows="2" cols="20"></textarea>
+          <button id="rsvp-submit" onclick="displayThanks()">Submit</button>
+        </form>
+         <!--Thank you message-->
+        <div id="rsvp-thanks">
+          <p>Thanks for filling up the form!</p>
+          <button type="submit">
+            <a href="index.html">Close</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Christmas Card</title>
+</head>
+<body>
+    <div class="container">
+        <div id="details-container">
+            <h1>Christmas Eve <br /> Party Invitation</h1>
+            <ul>
+                <li id="details-title" onclick="displayDiv(this.id)">
+                    <p>DETAILS ▼</p>
+                    <p id="details-info" class="hide" style="display: none;">
+                        Event<span style ="font-family: 'Times New Roman', Times, serif;">:</span>Dinner party <br />
+                        Date<span style ="font-family: 'Times New Roman', Times, serif;">:</span> 24 December 2022<br />
+                        Time<span style ="font-family: 'Times New Roman', Times, serif;">:</span>6<span style ="font-family: 'Times New Roman', Times, serif;">:</span>00pm
+                    </p>
+            </li>
+
+                <li id="contacts-title" onclick="displayDiv(this.id)">
+                    <p>CONTACTS ▼</p>
+                    <p id="contacts-info" class="hide" style="display: none;">
+                        Syehrran <br />
+                        0102254896
+                    </p>
+                </li>
+
+                <li id="location-title" onclick="displayDiv(this.id)">
+                    <p>LOCATION ▼</p>
+                    <p id="location-info" class="hide" style="display: none;">
+                        <a
+                          href="https://www.google.com/maps/dir/3.0261528,101.4679899/sunway+university/@3.0465808,101.4653641,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31cc4c8f5912644b:0x77612fa0225cad69!2m2!1d101.603841!2d3.0672267"
+                          target="_blank"
+                          >Sunway University</a
+                        >
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15936.410667386444!2d101.603841!3d3.0672267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x77612fa0225cad69!2sSunway%20University!5e0!3m2!1sen!2smy!4v1663904343704!5m2!1sen!2smy"
+                          width="100%"
+                          height="100%"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div id="card-container">
+            <!--Card outside page-->
+            <div id="outside">
+                <p id="outside-title">MERRY <br>CHRISTMAS!</p>
+                <p id="click button">
+                  <button id="open-btn" onclick="open_card()">
+                    Click here for a surprise
+                  </button>
+                </p>
+            </div>
+            <!--Card inner page-->
+            <div id="inside">
+                <p>
+                  <button id="close-btn" onclick="close_card()">&nbsp;X&nbsp;</button>
+                </p>
+                <p id="inside-title">Ho ho ho...</p>
+                <img id="inside-pic" src="./images/santa.png" />
+                <p id="message">
+                  Christmas... <br />a time of reflection, <br />a time for good cheer,
+                  <br />a time for friends and family, <br />during a special time of
+                  the year! <br />You and your guest are cordially invited to our
+                  <br />Annual Christmas Party.
+                  <br />
+                  <button id="rsvp-btn">
+                    <a href="form.html">Click for RSVP form</a>
+                  </button>
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
